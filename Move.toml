@@ -1,15 +1,30 @@
 [package]
-name = "hello_aptos"
+name = "hello_aptos2"
 version = "1.0.0"
 authors = []
 
 [addresses]
+std = "0x1"
+aptos_std = "0x1"
+aptos_framework = "0x1"
+aptos_token = "0x3"
+user = "0x84801d3586d1afeb7be41fd95140e94bb1409b5b4fb490c156dd77625f10b73d"
+admin = "0x84801d3586d1afeb7be41fd95140e94bb1409b5b4fb490c156dd77625f10b73d"
+source = "0x84801d3586d1afeb7be41fd95140e94bb1409b5b4fb490c156dd77625f10b73d"
+aptos_call = "0x84801d3586d1afeb7be41fd95140e94bb1409b5b4fb490c156dd77625f10b73d"
 
-[dev-addresses]
+[dependencies]
+# MoveStdlib = { git = "https://github.com/aptos-labs/aptos-core.git", subdir="aptos-move/framework/move-stdlib/",rev = "devnet" }
+# AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir="aptos-move/framework/aptos-framework/", rev = "devnet" }
+# AptosStdlib = { git = "https://github.com/aptos-labs/aptos-core.git", subdir="aptos-move/framework/aptos-stdlib/",rev = "devnet" }
+# AptosToken = { git = "https://github.com/aptos-labs/aptos-core.git", subdir="aptos-move/framework/aptos-token/", rev = "devnet" }
 
-[dependencies.AptosFramework]
-git = "https://github.com/aptos-labs/aptos-core.git"
-rev = "mainnet"
-subdir = "aptos-move/framework/aptos-framework"
+MoveStdlib = { local = "../aptos-core-main/aptos-move/framework/move-stdlib" }
+AptosFramework = { local = "../aptos-core-main/aptos-move/framework/aptos-framework" }
+AptosStdlib = { local = "../aptos-core-main/aptos-move/framework/aptos-stdlib" }
+AptosToken = { local = "../aptos-core-main/aptos-move/framework/aptos-token" }
 
-[dev-dependencies]
+# [dependencies.AptosFramework]
+# git = "https://github.com/aptos-labs/aptos-core.git"
+# rev = "mainnet"
+# subdir = "aptos-move/framework/aptos-framework"
